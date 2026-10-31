@@ -1,0 +1,826 @@
+
+/* =====================================================
+   CHEMROON ENTERPRISES LTD
+   COMPLETE SHARED WEBSITE STYLESHEET
+   Background image: background.png
+===================================================== */
+
+
+/* 1. RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    min-height: 100vh;
+    background-color: #073d35;
+
+    /* THE SAME BACKGROUND ON EVERY PAGE */
+    background-image:
+        linear-gradient(
+            rgba(0, 39, 35, 0.42),
+            rgba(0, 39, 35, 0.42)
+        ),
+        url("./background.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* 2. GENERAL CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 3. HEADER */
+
+.header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* 4. NAVIGATION */
+
+#navMenu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#navMenu a {
+    color: #263447;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#navMenu a:hover {
+    color: #c99020;
+}
+
+.nav-button {
+    background: #c99020;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #a87512;
+}
+
+
+/* 5. MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: #073d35;
+    color: white;
+    font-size: 25px;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* 6. BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #c99020;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #a87512;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn.secondary:hover {
+    background: white;
+    color: #073d35;
+}
+
+
+/* 7. HOMEPAGE HERO */
+
+.hero {
+    min-height: 490px;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+    background: transparent;
+}
+
+.hero-content {
+    max-width: 1200px;
+}
+
+.eyebrow {
+    color: #ffb52e;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 65px;
+    line-height: 1.12;
+    margin: 20px 0;
+    max-width: 750px;
+}
+
+.hero p {
+    color: white;
+    font-size: 18px;
+    max-width: 620px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* 8. TRUST SECTION */
+
+.trust-section {
+    padding: 28px 0;
+    background: rgba(0, 50, 44, 0.70);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 30px;
+}
+
+.trust-grid h3 {
+    color: #ffb52e;
+    font-size: 19px;
+}
+
+.trust-grid p {
+    color: white;
+}
+
+
+/* 9. GENERAL SECTIONS */
+
+.section {
+    padding: 75px 0;
+    background: transparent;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading span {
+    color: #ffb52e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: white;
+    font-size: 34px;
+    margin-top: 10px;
+}
+
+.section-heading p {
+    color: white;
+    margin-top: 10px;
+}
+
+
+/* 10. ABOUT SECTION */
+
+#about {
+    background: rgba(0, 44, 39, 0.52);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.about-content h3 {
+    color: #ffb52e;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: white;
+    margin-bottom: 18px;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.96);
+    color: #073d35;
+    padding: 45px 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h3 {
+    color: #073d35;
+    font-size: 35px;
+}
+
+.about-card p {
+    color: #073d35;
+    letter-spacing: 3px;
+}
+
+.about-card strong {
+    display: block;
+    margin-top: 15px;
+    color: #c99020;
+}
+
+
+/* 11. HOMEPAGE PRODUCTS */
+
+.products-section {
+    background: rgba(0, 44, 39, 0.60);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.97);
+    color: #263447;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #075044;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.product-card a {
+    color: #b17c13;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* 12. SERVICES */
+
+#services {
+    background: rgba(0, 44, 39, 0.52);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.96);
+    color: #263447;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #075044;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #555;
+}
+
+
+/* 13. QUOTATION SECTION */
+
+.quote-section {
+    padding: 75px 0;
+    background: rgba(0, 35, 31, 0.82);
+}
+
+.quote-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.quote-content span {
+    color: #ffb52e;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.quote-content h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.quote-content p {
+    color: #eeeeee;
+}
+
+
+/* 14. QUOTATION FORM */
+
+#quoteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#quoteForm input,
+#quoteForm select,
+#quoteForm textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background: white;
+    color: #263447;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+#quoteForm input:focus,
+#quoteForm select:focus,
+#quoteForm textarea:focus {
+    outline: none;
+    border-color: #c99020;
+}
+
+#quoteForm textarea {
+    resize: vertical;
+}
+
+#quoteForm button {
+    align-self: flex-start;
+}
+
+
+/* 15. CONTACT SECTION */
+
+#contact {
+    background: rgba(0, 44, 39, 0.55);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.96);
+    color: #263447;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contact-card h3 {
+    color: #075044;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+
+/* 16. SUPPLIES PAGE HERO */
+
+.supplies-hero {
+    padding: 80px 0;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.supplies-hero h1 {
+    font-size: 45px;
+    color: white;
+    margin: 10px 0;
+}
+
+.supplies-hero p {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+
+/* 17. SUPPLIES CATEGORY SECTION */
+
+.supplies-categories {
+    background: rgba(0, 44, 39, 0.50);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.category-card {
+    display: block;
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.97);
+    color: #263447;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.category-card span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.category-card h3 {
+    color: #075044;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.category-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.category-card strong {
+    color: #b17c13;
+    font-size: 14px;
+}
+
+
+/* 18. CATALOGUE SECTIONS */
+
+.catalogue-section {
+    background: rgba(0, 44, 39, 0.45);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.catalogue-card {
+    background: rgba(255, 255, 255, 0.97);
+    color: #263447;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.catalogue-card:hover {
+    transform: translateY(-5px);
+}
+
+.catalogue-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.catalogue-card h3 {
+    color: #075044;
+    margin-bottom: 10px;
+}
+
+.catalogue-card p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.catalogue-card a {
+    color: #b17c13;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* 19. SUPPLIES CALL TO ACTION */
+
+.catalogue-cta {
+    background: rgba(0, 35, 31, 0.85);
+    padding: 65px 0;
+    text-align: center;
+}
+
+.catalogue-cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.catalogue-cta p {
+    margin-bottom: 25px;
+    color: #eeeeee;
+}
+
+
+/* 20. FOOTER */
+
+.footer {
+    background: rgba(0, 30, 27, 0.96);
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.footer h2 {
+    color: #ffb52e;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #cccccc;
+    margin-top: 20px;
+}
+
+
+/* 21. TABLET RESPONSIVENESS */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .brand-logo {
+        width: 150px;
+    }
+
+    #navMenu {
+        gap: 14px;
+    }
+
+    #navMenu a {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        padding: 11px 14px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .product-grid,
+    .catalogue-grid,
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* 22. MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .brand-logo {
+        width: 150px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    #navMenu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    #navMenu.active {
+        display: flex;
+    }
+
+    #navMenu a {
+        width: 100%;
+        padding: 9px 0;
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid,
+    .service-grid,
+    .category-grid,
+    .catalogue-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .supplies-hero {
+        min-height: 300px;
+        padding: 55px 0;
+    }
+
+    .supplies-hero h1 {
+        font-size: 35px;
+    }
+
+    .catalogue-cta h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* 23. SMALL MOBILE SCREENS */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-logo {
+        width: 135px;
+    }
+
+    .supplies-hero h1 {
+        font-size: 30px;
+    }
+}
